@@ -1,5 +1,6 @@
 %define		_realname	netspeed_applet
-Summary:	Show how much traffic occurs on a network device.
+Summary:	Show how much traffic occurs on a network device
+Summary(pl):	Pokazywanie wielko¶ci ruchu wystêpuj±cego na urz±dzeniu sieciowym
 Name:		gnome-applet-netspeed
 Version:	0.10
 Release:	0.1
@@ -17,8 +18,12 @@ Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Netspeed applet is just a little applet that shows how much traffic occurs on a
-specified network device.
+Netspeed applet is just a little applet that shows how much traffic
+occurs on a specified network device.
+
+%description -l pl
+Netspeed jest po prostu niewielkim apletem pokazuj±cym wielko¶æ ruchu
+wystêpuj±cego na okre¶lonym urz±dzeniu sieciowym.
 
 %prep
 %setup -q -n %{_realname}-%{version}
