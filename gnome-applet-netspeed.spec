@@ -9,6 +9,7 @@ Group:		X11/Applications
 Source0:	http://www.wh-hms.uni-ulm.de/~mfcn/shared/netspeed/%{_realname}-%{version}.tar.gz
 # Source0-md5:	e6332b8ea135b560a8b84d7415728cdc
 URL:		http://mfcn.ilo.de/netspeed_applet/
+BuildRequires:	automake
 BuildRequires:	gnome-desktop-devel >= 2.4.0
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 2.0.1
