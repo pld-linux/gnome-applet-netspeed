@@ -2,12 +2,12 @@
 Summary:	Show how much traffic occurs on a network device
 Summary(pl):	Pokazywanie wielko¶ci ruchu wystêpuj±cego na urz±dzeniu sieciowym
 Name:		gnome-applet-netspeed
-Version:	0.11
+Version:	0.12.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.wh-hms.uni-ulm.de/~mfcn/shared/netspeed/%{_realname}-%{version}.tar.gz
-# Source0-md5:	267e5b76cbf20f365de5f04ef1e77eb8
+# Source0-md5:	7a651eab80c1a10654595fcfd4832463
 URL:		http://mfcn.ilo.de/netspeed_applet/
 BuildRequires:	automake
 BuildRequires:	gnome-desktop-devel >= 2.4.0
@@ -15,7 +15,6 @@ BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libgtop-devel
-Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,9 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%post
-%gconf_schema_install
 
 %files -f netspeed-applet.lang
 %defattr(644,root,root,755)
