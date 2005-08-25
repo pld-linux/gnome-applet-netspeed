@@ -2,19 +2,22 @@
 Summary:	Show how much traffic occurs on a network device
 Summary(pl):	Pokazywanie wielko¶ci ruchu wystêpuj±cego na urz±dzeniu sieciowym
 Name:		gnome-applet-netspeed
-Version:	0.12.1
-Release:	2
+Version:	0.13
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.wh-hms.uni-ulm.de/~mfcn/shared/netspeed/%{_realname}-%{version}.tar.gz
-# Source0-md5:	7a651eab80c1a10654595fcfd4832463
+# Source0-md5:	b5c5332993ed779c3653433c6f3b6a9a
 URL:		http://mfcn.ilo.de/netspeed_applet/
 BuildRequires:	automake
 BuildRequires:	gnome-desktop-devel >= 2.4.0
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	intltool >= 0.21
 BuildRequires:	libglade2-devel >= 2.0.1
-BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	libgnomeui-devel >= 2.8.0
+BuildRequires:	libgtop-devel >= 2.10.0
+BuildRequires:	rpmbuild(macros) >= 1.197
+BuildRequires:	scrollkeeper
 Requires(post,postun):	scrollkeeper
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,7 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f netspeed-applet.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_libdir}/netspeed_applet2
+%attr(755,root,root) %{_libdir}/%{_realname}2
 %{_libdir}/bonobo/servers/*.server
-%{_datadir}/omf/netspeed_applet/*.omf
+%{_omf_dest_dir}/%{_realname}
+%{_pixmapsdir}/%{_realname}
 %{_pixmapsdir}/*.png
