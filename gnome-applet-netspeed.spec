@@ -1,6 +1,6 @@
 %define		_realname	netspeed_applet
 Summary:	Show how much traffic occurs on a network device
-Summary(pl.UTF-8):   Pokazywanie wielkości ruchu występującego na urządzeniu sieciowym
+Summary(pl.UTF-8):	Pokazywanie wielkości ruchu występującego na urządzeniu sieciowym
 Name:		gnome-applet-netspeed
 Version:	0.13
 Release:	1
