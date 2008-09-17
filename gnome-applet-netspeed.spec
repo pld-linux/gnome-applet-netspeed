@@ -3,11 +3,12 @@ Summary:	Show how much traffic occurs on a network device
 Summary(pl.UTF-8):	Pokazywanie wielkości ruchu występującego na urządzeniu sieciowym
 Name:		gnome-applet-netspeed
 Version:	0.15
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.wh-hms.uni-ulm.de/~mfcn/netspeed/packages/%{_realname}-%{version}.tar.gz
 # Source0-md5:	6aacaac946b17b3a95a0b366c6dbe850
+Patch0:		%{name}-assertion.patch
 URL:		http://www.gnome.org/projects/netspeed/
 BuildRequires:	GConf2-devel
 BuildRequires:	autoconf >= 2.52
@@ -36,6 +37,7 @@ występującego na określonym urządzeniu sieciowym.
 
 %prep
 %setup -q -n %{_realname}-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
