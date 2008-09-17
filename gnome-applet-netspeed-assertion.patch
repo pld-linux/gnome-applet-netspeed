@@ -1,0 +1,12 @@
+diff -urN netspeed_applet-0.15/src/netspeed.c netspeed_applet-0.15.new/src/netspeed.c
+--- netspeed_applet-0.15/src/netspeed.c	2008-09-07 18:54:13.000000000 +0200
++++ netspeed_applet-0.15.new/src/netspeed.c	2008-09-17 09:54:42.000000000 +0200
+@@ -350,7 +350,7 @@
+ {
+ 	unsigned int q;
+ 	
+-	q = (applet->devinfo.qual - 1);
++	q = (applet->devinfo.qual);
+ 	q = logf (q / 3.0f) + 0.25f;
+ 
+ 	g_assert(q >= 0 && q < 4);
