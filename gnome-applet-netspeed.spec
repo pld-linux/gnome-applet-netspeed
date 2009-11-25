@@ -20,6 +20,7 @@ BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libgtop-devel >= 2.14.2
 BuildRequires:	libiw-devel >= 1:28-0.pre9.1
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 Requires(post,postun):	gtk+2
