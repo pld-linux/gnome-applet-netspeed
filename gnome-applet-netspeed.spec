@@ -39,7 +39,7 @@ występującego na określonym urządzeniu sieciowym.
 
 %prep
 %setup -q -n %{_realname}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__libtoolize}
